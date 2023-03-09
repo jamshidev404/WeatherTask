@@ -22,7 +22,6 @@ function Weather({ location, setLocation, searchLocation, photos }) {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.weather__wrapper}>
-
           {/* ========================= Left Side ========================== */}
           <div
             className={styles.left}
