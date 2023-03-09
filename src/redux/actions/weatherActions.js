@@ -1,6 +1,6 @@
 export const setWeather = (data) => {
   return {
-    type: "weather",
+    type: "WEATHER",
     payload: data,
   };
 };

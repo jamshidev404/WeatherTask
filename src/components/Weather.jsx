@@ -1,5 +1,5 @@
+import React from "react";
 import styles from "./Weather.module.scss";
-
 import lupa from "../images/lupa.png";
 import {
   WiNightCloudyWindy,
@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 
 const day = new Date();
 const hours = day.getUTCHours();
-const minute = day.getUTCMinutes();
+const minute = day.getMinutes();
 const getWeek = day.toDateString();
 
 function Weather({ location, setLocation, searchLocation, photos }) {
@@ -36,16 +36,7 @@ function Weather({ location, setLocation, searchLocation, photos }) {
                 <p className={styles.city__name}>
                   {data.name}
                   {data.sys ? (
-                    <sup
-                      style={{
-                        fontSize: "24px",
-                        marginLeft: "20px",
-                        display: "inline",
-                        alignSelf: "self-start",
-                      }}
-                    >
-                      {data.sys.country}
-                    </sup>
+                    <sup className={styles.sup}>{data.sys.country}</sup>
                   ) : null}
                 </p>
                 <span className={styles.time}>

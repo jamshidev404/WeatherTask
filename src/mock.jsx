@@ -27,7 +27,7 @@ export const regions = [
     name: "Buxoro",
   },
   {
-    name: "Surkhandaryo",
+    name: "Surxandaryo",
   },
   {
     name: "Qashqadaryo",
@@ -36,7 +36,7 @@ export const regions = [
     name: "Navoiy",
   },
   {
-    name: "Khorezm",
+    name: "Xorazm",
   },
   {
     name: "Karakalpakstan",

@@ -9,21 +9,15 @@ function App() {
   const dispatch = useDispatch();
   const [location, setLocation] = useState("");
   const [photos, setPhotos] = useState(require("../src/images/2.jpg"));
-
-  // window.addEventListener("keydown", function (e) {
-  //   if (e.key === "Enter") {
-  //     searchLocation(location);
-  //   }
-  // });
-
   const searchLocation = (reg) => {
     axios
       .get(
         `https://api.openweathermap.org/data/2.5/weather?q=${
           reg || location
-        }&units=metric&appid=895284fb2d2c50a520ea537456963d9c`,
+        }&units=metric&appid=895284fb2d2c50a520ea537456963d9c`
       )
       .then((response) => {
+        //dynamic photo
         const unsplash = createApi({
           accessKey: "gqV_1vvQFYJPCbekBH2r66Kx6uR3EJCGBasb_QnoBXw",
         });
@@ -46,6 +40,7 @@ function App() {
   };
 
   useEffect(() => {
+    // default location
     searchLocation("Tashkent");
   }, []);
 
