@@ -1,7 +1,17 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 /* ========== Left side styles ======== */
 
 .weather__wrapper {
   display: flex;
+
+  @media (max-width: 900px) {
+    display: grid;
+  }
 }
 
 .left {
@@ -11,9 +21,11 @@
   display: grid;
   z-index: 9;
   position: relative;
-  background-image: url("../images/2.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 }
 
 .top__text {

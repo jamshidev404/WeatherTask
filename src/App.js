@@ -10,11 +10,11 @@ function App() {
   const [location, setLocation] = useState("");
   const [photos, setPhotos] = useState(require("../src/images/2.jpg"));
 
-  window.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      searchLocation(location);
-    }
-  });
+  // window.addEventListener("keydown", function (e) {
+  //   if (e.key === "Enter") {
+  //     searchLocation(location);
+  //   }
+  // });
 
   const searchLocation = (reg) => {
     axios

@@ -1,3 +1,6 @@
+export const  WEATHER = "WEATHER"
+
+
 const initialState = {};
 
 export const weatherReducer = (state = initialState, action) => {

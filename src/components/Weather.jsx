@@ -22,6 +22,8 @@ function Weather({ location, setLocation, searchLocation, photos }) {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.weather__wrapper}>
+
+          {/* ========================= Left Side ========================== */}
           <div
             className={styles.left}
             style={{ backgroundImage: `url(${photos})` }}
@@ -59,27 +61,26 @@ function Weather({ location, setLocation, searchLocation, photos }) {
                   }@2x.png`}
                 />
                 {data.weather ? (
-                  <p className={styles.desc}>
-                    {data.weather[0].description}
-                  </p>
+                  <p className={styles.desc}>{data.weather[0].description}</p>
                 ) : null}
               </div>
             </div>
           </div>
 
+          {/* ========================= Right Side ========================== */}
           <div className={styles.right}>
             <div className={styles.search}>
               <input
                 value={location}
                 onChange={(event) => setLocation(event.target.value)}
-                placeholder="Enter Location"
-                type="text"
+                placeholder='Enter Location'
+                type='text'
               />
               <div
                 onClick={() => searchLocation(location)}
                 className={styles.lupa}
               >
-                <img src={lupa} alt="lupa" />
+                <img src={lupa} alt='lupa' />
               </div>
             </div>
             <div className={styles.line}></div>
