@@ -17,7 +17,7 @@ function App() {
         }&units=metric&appid=895284fb2d2c50a520ea537456963d9c`
       )
       .then((response) => {
-        //dynamic photo
+        //dynamic photos
         const unsplash = createApi({
           accessKey: "gqV_1vvQFYJPCbekBH2r66Kx6uR3EJCGBasb_QnoBXw",
         });
